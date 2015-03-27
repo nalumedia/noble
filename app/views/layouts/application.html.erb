@@ -16,6 +16,9 @@
 <div class="row">
 <div class="col-md-12 text-right">
 <% if user_signed_in? %>
+<%= link_to signups_path do %>
+<i class="fa fa-user"></i> &nbsp; Application Sign Ups <% end %>
+&nbsp; 
 <%= link_to destroy_user_session_path, method: :delete do %>
 <i class="fa fa-sign-out"></i>  &nbsp;  Logout   &nbsp; 
 								             <% end %>
@@ -29,7 +32,7 @@
 
 <div class="row">
 <div class="col-md-12 text-left">
-<img src="https://s3.amazonaws.com/gmnnoble/images/nelogo300.png">
+<%= link_to image_tag("https://s3.amazonaws.com/gmnnoble/images/nelogo300.png"), root_path %>	
 
 </div><!-- end md 4 -->
 </div><!-- end row -->
@@ -40,7 +43,7 @@
 
 <hr />
 <div class="row">
-<div class="col-md-12 text-center">&copy; 2015, GridMeNow, LLC. Powered by GridMeNow.</div><!-- end md 4 -->
+<div class="col-md-12 text-center">&copy; 2015, Powered by <a href="htts://www.gridmenow.com" target="new">GridMeNow</a></div><!-- end md 4 -->
 </div><!-- end row -->
 
 </div> <!-- end container -->

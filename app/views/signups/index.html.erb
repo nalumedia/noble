@@ -1,12 +1,16 @@
-<h1>Listing signups</h1>
+<% if user_signed_in? %>
 
-<table>
+<h1>Application Sign Ups</h1>
+<%= link_to new_signup_path do %>
+<i class="fa fa-plus"></i> &nbsp; Add a New Application Sign Up <% end %>
+
+<table class="table table-hover table-striped">
   <thead>
     <tr>
-      <th>Signup name</th>
-      <th>Signup email</th>
-      <th>Signup phone</th>
-      <th>Signup status</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+      <th>Status</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,10 +21,15 @@
         <td><%= signup.signup_name %></td>
         <td><%= signup.signup_email %></td>
         <td><%= signup.signup_phone %></td>
-        <td><%= signup.signup_status %></td>
-        <td><%= link_to 'Show', signup %></td>
-        <td><%= link_to 'Edit', edit_signup_path(signup) %></td>
-        <td><%= link_to 'Destroy', signup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <% if signup.signup_status.blank? %>
+          New
+          <% else %>
+          <%= signup.signup_status %>
+          <% end %></td>
+        <td><%= link_to 'View', signup %> |
+        <%= link_to 'Edit', edit_signup_path(signup) %> |
+        <%= link_to 'Delete', signup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +37,8 @@
 
 <br>
 
-<%= link_to 'New Signup', new_signup_path %>
+
+
+<% else %> 
+YOU DO NOT HAVE PERMISSION TO ACCESS THIS AREA 
+<% end %>

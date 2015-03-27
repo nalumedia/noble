@@ -12,3 +12,17 @@
        font-url('glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 
+
+a {
+  color: #AF012F;
+  font-size: 14px;
+  &:visited {
+  color: #AF012F;
+  }
+  &:hover {
+    color: #3276BC;
+    transition: color 0.3s ease-in;
+    text-decoration: none;
+
+  }
+}
