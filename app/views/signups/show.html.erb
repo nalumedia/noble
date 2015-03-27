@@ -1,24 +1,14 @@
-<p id="notice"><%= notice %></p>
 
+<div class="row">
+<div class="col-md-4"></div><!-- end md 4 -->
+<div class="col-md-4">
 <p>
-  <strong>Signup name:</strong>
-  <%= @signup.signup_name %>
-</p>
+	Thank you <%= @signup.signup_name %> for signing up for GridMeNow. Once you are approved you will recieve an email at:  <%= @signup.signup_email %> with instructions on how to download the application </p>
+  
+</div><!-- end md 4 -->
+<div class="col-md-4"></div><!-- end md 4 -->
+</div><!-- end row -->
 
-<p>
-  <strong>Signup email:</strong>
-  <%= @signup.signup_email %>
-</p>
 
-<p>
-  <strong>Signup phone:</strong>
-  <%= @signup.signup_phone %>
-</p>
 
-<p>
-  <strong>Signup status:</strong>
-  <%= @signup.signup_status %>
-</p>
 
-<%= link_to 'Edit', edit_signup_path(@signup) %> |
-<%= link_to 'Back', signups_path %>
