@@ -26,7 +26,8 @@
           New
           <% else %>
           <%= signup.signup_status %>
-          <% end %></td>
+          <% end %>
+          <br /> <%= signup.created_at.to_formatted_s(:short) %></td>
         <td><%= link_to 'View', signup %> |
         <%= link_to 'Edit', edit_signup_path(signup) %> |
         <%= link_to 'Delete', signup, method: :delete, data: { confirm: 'Are you sure?' } %></td>

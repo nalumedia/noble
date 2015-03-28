@@ -1,6 +1,11 @@
-<h1>Editing signup</h1>
+
+<% if user_signed_in? %> 
+<h1>Edit Sign Up</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @signup %> |
-<%= link_to 'Back', signups_path %>
+<% else %>
+YOU ARE NOT AUTHORIZED TO VIEW THIS CONTENT 
+<% end %>
+
+

@@ -12,10 +12,14 @@
        font-url('glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 
+body {
+	font-family: 'Roboto', sans-serif;
+	line-height: 28px;
+}
+
 
 a {
   color: #AF012F;
-  font-size: 14px;
   &:visited {
   color: #AF012F;
   }
@@ -25,4 +29,8 @@ a {
     text-decoration: none;
 
   }
+}
+
+#footer {
+	font-size: 10px;
 }

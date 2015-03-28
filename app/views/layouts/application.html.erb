@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <%= csrf_meta_tags %>
@@ -37,13 +38,13 @@
 </div><!-- end md 4 -->
 </div><!-- end row -->
 
-
+<br />
 
 <%= yield %>
 
 <hr />
 <div class="row">
-<div class="col-md-12 text-center">&copy; 2015, Powered by <a href="htts://www.gridmenow.com" target="new">GridMeNow</a></div><!-- end md 4 -->
+<div class="col-md-12 text-center" id="footer">&copy; 2015, Powered by <a href="htts://www.gridmenow.com" target="new">GridMeNow</a></div><!-- end md 4 -->
 </div><!-- end row -->
 
 </div> <!-- end container -->
