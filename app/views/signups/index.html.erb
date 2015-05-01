@@ -1,9 +1,9 @@
 <% if user_signed_in? %>
 
-<h1>Application Sign Ups</h1>
+<h1>Application Sign Ups (<%= Signup.count %>)</h1>
 <%= link_to new_signup_path do %>
-<i class="fa fa-plus"></i> &nbsp; Add a New Application Sign Up <% end %>
-
+<i class="fa fa-plus"></i> &nbsp; Add a New Application Sign Up <% end %><br />
+<i>@nblenergy.com, and @nobleenergyinc.com email addresses should automatically validate. ALL OTHER EMAILS MUST BE APPROVED BY NOBLE ADMINS</i>
 <table class="table table-hover table-striped">
   <thead>
     <tr>
@@ -25,12 +25,16 @@
           <% if signup.signup_status.blank? %>
           New
           <% else %>
+          <% if signup.signup_status = "New" %>
+          <div id="red"><%= signup.signup_status %></div>
+          <% else %>
           <%= signup.signup_status %>
           <% end %>
-          <br /> <%= signup.created_at.to_formatted_s(:short) %></td>
-        <td><%= link_to 'View', signup %> |
-        <%= link_to 'Edit', edit_signup_path(signup) %> |
-        <%= link_to 'Delete', signup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+          <br />Created: <%= signup.created_at.to_formatted_s(:short) %><br />
+                Updated: <%= signup.updated_at.to_formatted_s(:short) %></td>
+        <td>
+        <%= link_to 'Update', edit_signup_path(signup) %></td>
       </tr>
     <% end %>
   </tbody>

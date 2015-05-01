@@ -1,1 +1,6 @@
-<p>New Signup</p>
+<% signup = Signup.all %>
+<p>Noble Houston New Application Signup</p>
+<p>Name: <%= @signup.signup_name %></p>
+<p>Email:  <%= @signup.signup_email %></p>
+<p>Phone: <%= @signup.signup_phone %></p>
+<p>Created At: <%= @signup.created_at.to_formatted_s(:short) %></p>

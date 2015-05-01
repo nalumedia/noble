@@ -1,11 +1,11 @@
 class PurchaseMailer < ActionMailer::Base
 layout 'purchase_mailer'
 
- default from: "GMN Admin <admin@gridmenow.com>"
+ default from: "GridMeNow Signups <signup@gridmenow.com>"
 
  def purchase_receipt signup
  @signup = signup
- mail to: "ryan@gridmenow.com", subject: "Thanks for your purchase!"
+ mail to: "support@gridmenow.com", subject: "Application Signup: noble.gmn3.com"
 
   end
 
