@@ -4,7 +4,7 @@ class SignupsController < ApplicationController
   respond_to :html
 
   def index
-    @signups = Signup.all
+    @signups = Signup.all.order("created_at DESC")
     respond_with(@signups)
   end
 

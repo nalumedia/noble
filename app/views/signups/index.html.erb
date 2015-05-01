@@ -25,11 +25,7 @@
           <% if signup.signup_status.blank? %>
           New
           <% else %>
-          <% if signup.signup_status = "New" %>
-          <div id="red"><%= signup.signup_status %></div>
-          <% else %>
           <%= signup.signup_status %>
-          <% end %>
           <% end %>
           <br />Created: <%= signup.created_at.to_formatted_s(:short) %><br />
                 Updated: <%= signup.updated_at.to_formatted_s(:short) %></td>
