@@ -42,6 +42,6 @@ class SignupsController < ApplicationController
     end
 
     def signup_params
-      params.require(:signup).permit(:signup_name, :signup_email, :signup_phone, :signup_status)
+      params.require(:signup).permit(:signup_name, :signup_email, :signup_phone, :signup_status, :signup_type)
     end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150327222307) do
+ActiveRecord::Schema.define(version: 20150615132348) do
 
   create_table "signups", force: true do |t|
     t.string   "signup_name"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20150327222307) do
     t.string   "signup_status"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "signup_type"
   end
 
   create_table "users", force: true do |t|
