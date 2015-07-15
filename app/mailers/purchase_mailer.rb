@@ -5,7 +5,7 @@ layout 'purchase_mailer'
 
  def purchase_receipt signup
  @signup = signup
- mail to: "support@gridmenow.com", subject: "Application Signup: noble.gmn3.com"
+ mail to: "gsoc@nblenergy.com", subject: "Application Signup: noble.gmn3.com"
 
   end
 
