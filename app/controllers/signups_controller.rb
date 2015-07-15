@@ -28,7 +28,7 @@ class SignupsController < ApplicationController
 
   def update
     @signup.update(signup_params)
-    respond_with(@signup)
+    redirect_to(signups_path)
   end
 
   def destroy
